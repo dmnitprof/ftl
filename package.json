@@ -1,0 +1,36 @@
+{
+  "name": "ftl",
+  "version": "1.0.0",
+  "description": "transportation of goods",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel src/index.html --no-source-maps --open",
+    "build": "parcel build src/index.html --no-source-maps --no-cache"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmnitprof/ftl.git"
+  },
+  "keywords": [
+    "cargo",
+    "transportation",
+    "full",
+    "car",
+    "loading"
+  ],
+  "author": "Nikulshin Dmitriy, dmn.itprof@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmnitprof/ftl/issues"
+  },
+  "homepage": "https://github.com/dmnitprof/ftl#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "sass": "^1.32.11"
+  },
+  "parcelCleanPaths": [
+    "dist",
+    ".cache"
+  ]
+}
