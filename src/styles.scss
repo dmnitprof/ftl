@@ -97,12 +97,24 @@ margin: 1rem 0 .5rem 0;
 //.form-fields__label-text-last {
 // margin: 0 0 0 .5rem;
 //}
-.form-fields__label--right {
+.form-fields__label-left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 1rem 0 .5rem 0;
+  text-align: left;
+}
+.form-fields__label-right {
   display: flex;
   justify-content: flex-end;
   align-content: flex-end;
   margin: 1rem 0 .5rem 0;
   text-align: right;
+}
+.form-fields--wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .form-fields__input {
   max-width: 100%;
