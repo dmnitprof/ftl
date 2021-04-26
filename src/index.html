@@ -13,7 +13,7 @@
         <div class="page__inner">
             <h1 class="page__title">FTL: Прямая машина</h1>
             <form class="form">
-                <div class="form-fields">
+                <div class="form__fields-route">
                     <h3 class="form-fields__title"><span class="form-fields__title-number">1</span>Маршрут</h3>
                     <label class="form-fields__label form-fields--col">
                         <span class="form-fields__label-text">откуда</span>
@@ -24,14 +24,15 @@
                         <input class="form-fields__input" type="text">
                     </label>
                 </div>
-                <div class="form-fields">
+                <div class="form-wrapper">
+                <div class="form__fields-transport">
                     <h3 class="form-fields__title"><span class="form-fields__title-number">2</span>Транспорт</h3>
                     <div class="form-fields--row">
                         <label class="form-fields__label  form-fields--col">
                             <span class="form-fields__label-text">грузоподъемность</span>
-                            <select class="form-fields__select form-fields__select--fourth">
-                                <option value="не выбрана">не выбрана</option>
-                                <option value="пункт1">пункт1</option>
+                            <select class="form-fields__select">
+                                <option class="select__option-first" value="не выбрана">не выбрана</option>
+                                <option class="option" value="пункт1">пункт1</option>
                                 <option value="пункт2">пункт2</option>
                                 <option value="пункт3">пункт3</option>
                                 <option value="пункт4">пункт4</option>
@@ -51,11 +52,11 @@
                         </label>
                     </div>
                 </div>
-                <div class="form-fields">
+                <div class="form__fields-cargo">
                     <h3 class="form-fields__title"><span class="form-fields__title-number">3</span>Груз</h3>
                     <label class="form-fields__label form-fields--col">
                         <span class="form-fields__label-text">Тип груза</span>
-                        <select class="form-fields__select form-fields--response">
+                        <select class="form-fields__select form-fields__select--response">
                             <option value="не выбрана">не выбран</option>
                             <option value="пункт1">пункт1</option>
                             <option value="пункт2">пункт2</option>
@@ -68,7 +69,8 @@
                         <label class="form-fields__label form-fields--col">
                             <span class="form-fields__label-text">Класс опасности</span>
                             <select class="form-fields__select">
-                                <option value="не выбрана">Класс 5 — Окисляющие вещества и органические перекиси</option>
+                                <option value="не выбрана">Класс 5 — Окисляющие вещества и органические перекиси
+                                </option>
                                 <option value="пункт1">пункт1</option>
                                 <option value="пункт2">пункт2</option>
                                 <option value="пункт3">пункт3</option>
@@ -78,41 +80,63 @@
                         </label>
                         <label class="form-fields__label form-fields--col">
                             <span class="form-fields__label-text">Объявленная ценность, &#8381;</span>
-                            <input class="form-fields__input form-fields__input--half" type="number" placeholder="&#8805;">
+                            <input class="form-fields__input" type="number"
+                                   placeholder="&#8805;">
                         </label>
                     </div>
-                        <label class="form-fields__label form-fields--row">
-                            <input class="form-fields__checkbox" type="checkbox">
-
-                            <span class="form-fields-checkbox__text">Требуется температурный режим</span>
-                        </label>
+                    <label class="form-fields__label form-fields--row">
+                        <div class="checkbox">
+                            <input class="checkbox__input" id="checkbox__input" type="checkbox">
+                            <label class="checkbox__label" for="checkbox__input"></label>
+                        </div>
+                        <span class="checkbox__text">Требуется температурный режим</span>
+                    </label>
                 </div>
                 <div class="form-fields--row">
                     <label class="form-fields__label form-fields--col">
                         <span class="form-fields__label-text">От, &#8451;</span>
-                        <input class="form-fields__input form-fields__input--half" type="number" placeholder="-20">
+                        <input class="form-fields__input" type="number" placeholder="-20">
                     </label>
-                    <label class="form-fields__label  form-fields__label--last form-fields--col">
-                        <span class="form-fields__label-text form-fields__label-text-last"> До, &#8451;</span>
-                        <input class="form-fields__input form-fields__input--half-last" type="number" placeholder="+23">
+                    <label class="form-fields__label form-fields--col">
+                        <span class="form-fields__label-text"> До, &#8451;</span>
+                        <input class="form-fields__input" type="number" placeholder="+23">
                     </label>
                 </div>
-                <div class="form-fields">
+                </div>
+                <div class="form__fields-time">
                     <h3 class="form-fields__title"><span class="form-fields__title-number">4</span>Время</h3>
                     <label class="form-fields__label form-fields--col">
-                        <div class="form-fields--wrap">
-                            <span class="form-fields__label-left">когда прибыли на точку</span>
-                            <span class="form-fields__label-right">700 км в день</span>
+                        <div class="fields-wrapper">
+                            <span class="fields__label">когда прибыли на точку</span>
+                            <span class="fields__label">700 км в день</span>
                         </div>
-                        <input class="form-fields__input " type="text" placeholder="Адрес не указан">
-                        <input class="form-fields__input " type="text" placeholder="Адрес не указан">
+                        <div class="fields-time">
+                            <div class="radio">
+                                <input class="fields-time__radio"  id="radio" type="radio">
+                                <label for="radio" class="fields-time__label"></label>
+                                <span class="fields-time__address">Длинный адрес с градиентом</span>
+                                <span class="fields-time__text">не выбрано</span>
+                            </div>
+
+                        </div>
+                        <div class="fields-time">
+                            <div class="radio">
+                                <input class="fields-time__radio"  id="radio2" type="radio">
+                                <label for="radio2" class="fields-time__label"></label>
+                                <span class="fields-time__address">Адрес не указан</span>
+                                <span class="fields-time__text">не выбрано</span>
+                            </div>
+
+                        </div>
                     </label>
                 </div>
-                <label class="form-fields__label">
-                    <span class="form-fields__label-text">Комментарии к заказу</span>
-                    <textarea class="form-fields__textarea"
-                              placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
-                </label>
+                <div class="fields-textarea">
+                    <label class="form-fields__label">
+                        <div class="fields__label-text">Комментарии к заказу</div>
+                        <textarea class="form-fields__textarea"
+                                  placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+                    </label>
+                </div>
                 <div class="form-fields__pop-up">
                     Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
                 </div>
