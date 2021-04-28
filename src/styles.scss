@@ -37,7 +37,6 @@ body {
 
 .page__inner {
   max-width: 728px;
-  margin: 0 auto 0 170px;
   padding: 1rem;
 }
 
@@ -123,11 +122,11 @@ body {
 }
 
 .fields__label {
-  margin: 1rem 0 .5rem 0 !important;
+  margin: 1rem 0 .5rem 0;
 }
 
 .fields__label-text {
-  margin: 1rem 0 .5rem 0 !important;
+  margin: 1rem 0 .5rem 0;
 }
 
 .form-fields__input {
@@ -140,17 +139,23 @@ body {
 }
 
 .form-fields__select {
+  max-width: 100%;
+  font-size: 16px;
   width: 100%;
   height: 44px;
-  max-width: 172px;
-  border-radius: 0;
-  .option:hover {
-    color: #EF483E;
-    background-color: #EF483E !important;
+  cursor: url(./hand-kursor.svg) , auto ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none !important;
+  &::-ms-expand {
+    display: none;
   }
+    background-image   : url('./arrow-up.svg');
+    background-position: right;
+    background-repeat  : no-repeat;
+  padding: 0 .5rem 0 .5rem;
 }
-.form-fields__select--response{
-  max-width: 100%;
+.select__option {
 }
 /*=================================================*/
 /*Checkbox*/
@@ -163,7 +168,6 @@ body {
   margin: 1rem .5rem 1rem 0;
   border: 2px solid #FFFFFF;
   text-align: center;
-
 }
 
 .checkbox__input {
@@ -177,7 +181,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  cursor: pointer
+  cursor: url(./hand-kursor.svg) , auto ;
 }
 .checkbox__input:checked + .checkbox__label:before {
   content: "\2714" !important;
@@ -187,8 +191,12 @@ body {
 /*=====================================================*/
                   /*textarea*/
 /*======================================================*/
+.fields-textarea {
+  margin: 1rem 0 .5rem 0;
+}
 .form-fields__textarea {
   display: block;
+  height: 80px;
   width: 100%;
   resize: none;
   background: #FFFFFF;
@@ -215,23 +223,22 @@ body {
 /*=====================================================*/
 /*fields time and radio*/
 /*=====================================================*/
-.fields-time-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+
 .fields-time {
-  margin: 0 0 .3rem 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   background: #4B4B4F;
   height: 44px;
+  margin: 0 0 .3rem 0;
   padding: 0 .5rem;
-
+  align-items: center;
 
   }
 .radio{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
   position: relative;
   overflow: hidden;
   white-space: nowrap;
@@ -245,11 +252,11 @@ body {
   .fields-time__label{
     padding-left: 1rem;
     margin-right: .5rem;
-    cursor: pointer;
+    cursor: url(./hand-kursor.svg) , auto ;
   }
   .fields-time__label:before{
     content: '';
-    top: 0;
+    top: 8px;
     left: 0;
     display: block;
     position: absolute;
@@ -257,13 +264,15 @@ body {
     height: 16px;
     background: #fff;
     border-radius: 50%;
+    text-align: left;
     z-index: 1;
+
 
   }
   .fields-time__label:after{
     content: '';
     left: 4px;
-    top: 4px;
+    top: 12px;
     position: absolute;
     display: block;
     width: 8px;
@@ -273,16 +282,15 @@ body {
     z-index: 2;
   }
 
-.fields-time__radio:checked + .fields-time__label:before {
+.fields-time__radio:checked ~ .fields-time__label:before {
   background: #EF483E;
-
 }
+
 .fields-time__radio:checked ~ .fields-time__text {
   opacity: 1;
 }
-
-
 .fields-time__address{
+margin-right:  auto;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -305,47 +313,45 @@ body {
 /*==================================================*/
 /*media*/
 /*=================================================*/
-@media (max-width: 480px){
+
+@media (min-width: 320px) and(max-width: 767.98px){
 
   .page__inner {
     padding: 1rem;
     margin: 0 auto;
   }
-}
-
-@media (max-width: 575.98px) {
-
   .page__title {
     font-size: 28px;
   }
-  .page__inner {
-    padding: 1rem;
-    margin: 0 auto;
-  }
-
 }
 
-@media (min-width: 576px) and (max-width: 768.98px) {
+@media (min-width: 768px) and (max-width: 991.98px){
   .page__inner {
     padding: 1rem;
     margin: 0 auto;
   }
   .page__title {
     font-size: 32px;
-    line-height: 68px;
+    line-height: 40px;
   }
 
 }
-//
-@media (min-width: 769px) {
+
+@media (min-width: 992px) and (max-width: 1199.98px){
   .page__inner {
     padding: 1rem;
-    margin: 0 auto;
+    margin: 0 auto 0 170px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .page__inner {
+    padding: 1rem;
+    margin: 0 auto 0 170px;
   }
 }
 
 /*=================================================*/
 /*The End...*/
 /*=================================================*/
-
 

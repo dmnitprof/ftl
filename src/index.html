@@ -32,11 +32,11 @@
                             <span class="form-fields__label-text">грузоподъемность</span>
                             <select class="form-fields__select">
                                 <option class="select__option-first" value="не выбрана">не выбрана</option>
-                                <option class="option" value="пункт1">пункт1</option>
-                                <option value="пункт2">пункт2</option>
-                                <option value="пункт3">пункт3</option>
-                                <option value="пункт4">пункт4</option>
-                                <option value="пункт5">пункт5</option>
+                                <option class="select__option" value="пункт1">пункт1</option>
+                                <option class="select__option"value="пункт2">пункт2</option>
+                                <option class="select__option"value="пункт3">пункт3</option>
+                                <option class="select__option"value="пункт4">пункт4</option>
+                                <option class="select__option" value="пункт5">пункт5</option>
                             </select>
                         </label>
                         <label class="form-fields__label form-fields--col">
@@ -56,7 +56,7 @@
                     <h3 class="form-fields__title"><span class="form-fields__title-number">3</span>Груз</h3>
                     <label class="form-fields__label form-fields--col">
                         <span class="form-fields__label-text">Тип груза</span>
-                        <select class="form-fields__select form-fields__select--response">
+                        <select class="form-fields__select">
                             <option value="не выбрана">не выбран</option>
                             <option value="пункт1">пункт1</option>
                             <option value="пункт2">пункт2</option>
@@ -112,27 +112,25 @@
                         </div>
                         <div class="fields-time">
                             <div class="radio">
-                                <input class="fields-time__radio"  id="radio" type="radio">
+                                <input class="fields-time__radio"  id="radio" type="checkbox">
                                 <label for="radio" class="fields-time__label"></label>
                                 <span class="fields-time__address">Длинный адрес с градиентом</span>
                                 <span class="fields-time__text">не выбрано</span>
                             </div>
-
                         </div>
                         <div class="fields-time">
                             <div class="radio">
-                                <input class="fields-time__radio"  id="radio2" type="radio">
+                                <input class="fields-time__radio"  id="radio2" type="checkbox">
                                 <label for="radio2" class="fields-time__label"></label>
                                 <span class="fields-time__address">Адрес не указан</span>
                                 <span class="fields-time__text">не выбрано</span>
                             </div>
-
                         </div>
                     </label>
                 </div>
                 <div class="fields-textarea">
                     <label class="form-fields__label">
-                        <div class="fields__label-text">Комментарии к заказу</div>
+                        <span class="fields__label-text">Комментарии к заказу</span>
                         <textarea class="form-fields__textarea"
                                   placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
                     </label>

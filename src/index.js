@@ -1,10 +1,8 @@
 import  './styles.scss'
 
 console.log('work!!!')
-// const check = document.querySelector('.form-fields__checkbox')
+// const labelRadio = document.querySelector('.fields-time__label')
 //
-// check.addEventListener('click',function () {
-//     if(check.checked) {
-//         check.style.background = '#EF483E;'
-//     }
+// labelRadio.addEventListener('click',function () {
+//    labelRadio.classList.toggle('checked')
 // })
