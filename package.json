@@ -32,5 +32,9 @@
   "parcelCleanPaths": [
     "dist",
     ".cache"
-  ]
+  ],
+  "dependencies": {
+    "select": "^1.1.2",
+    "select.js": "^1.0.3"
+  }
 }
