@@ -145,7 +145,6 @@ body {
 }
 
 .select-selected {
-  max-width: 172px;
   display: flex;
   align-items: center;
   padding: 0 1rem;
@@ -424,6 +423,7 @@ body {
   .form-inner {
     align-items: center
   }
+
 }
 
 @media (min-width: 768px) and (max-width: 991.98px) {
@@ -439,16 +439,16 @@ body {
     margin-left: 0.5rem;
 
   }
+  .select-selected, .select-items div{
+    max-width: 356px;
+
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
   .page__inner {
     padding: 1rem;
     margin: 0 auto 0 170px
-  }
-  .select-selected {
-    max-width: 347px;
-
   }
 }
 
